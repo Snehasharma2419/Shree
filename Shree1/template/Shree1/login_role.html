@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - SHREE</title>
+    <link rel="stylesheet" href="{% static 'Shree1/css/login_role.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="header-section">
+            <h1>Welcome</h1>
+            <p>Select your role to continue</p>
+        </div>
+
+        <a href="{% url 'admin_login' %}" class="role-btn admin-btn">Admin</a>
+<a href="{% url 'warden_login' %}" class="role-btn warden-btn">Warden</a>
+<a href="{% url 'worker_login' %}" class="role-btn worker-btn">Worker</a>
+<a href="{% url 'supplier_login' %}" class="role-btn supplier-btn">Supplier</a>
+        <a href="{% url 'choose_signup' %}">Sign Up</a>
+    </div>
+     
+    <script src="{% static 'Shree1/js/login.js' %}"></script>
+</body>
+</html>
